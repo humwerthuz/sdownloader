@@ -1,0 +1,24 @@
+SDOWNLOADER
+===========
+
+This script downloads subtitles for any video file that is placed inside the configured directory.
+
+
+DEPENDENCIES
+============
+
+
+- Periscope (https://code.google.com/p/periscope)
+
+
+INSTALLATION
+============
+
+- Configure desired directory on line 10: target_dir variable
+- Copy the srt_auto_dwn.py to your prefered python scripts folder and set this path in sdownloader.conf
+- Then... do the following
+``` 
+cp sdownloader.conf /etc/init/
+ln -s /lib/init/upstart-job  /etc/init.d/sdownloader 
+update-rc.d sdownloader defaults
+```
